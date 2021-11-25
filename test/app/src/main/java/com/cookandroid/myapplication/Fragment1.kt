@@ -15,9 +15,4 @@ class Fragment1 : Fragment() {
         val view = inflater.inflate(R.layout.frag1, container, false)
         return view
     }
-
-    override fun onViewCreated(){
-        val lv = find(R.id.main_fragment) as ListView
-        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1,listOf("car", "plane"))
-        lv.adapter = adapter
-    }}
+}

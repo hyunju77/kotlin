@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,10 +8,42 @@
     android:background="#ffffff"
     tools:context=".MainActivity">
 
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#687BA1"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/btn_pre"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/previous_white" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="90dp"
+            android:text="게시글 작성"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/btn_done"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/check_white" />
+
+    </TableRow>
+
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="417dp"
-        android:layout_height="740dp"
+        android:layout_height="540dp"
         android:background="#687ba1"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -18,39 +51,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_margin="15dp">
-
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/previous_white" />
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="295dp"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:text="              게시글 작성"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="#FFFFFF"
-                android:textSize="25sp" />
-
-            <Button
-                android:id="@+id/button5"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@drawable/check_white" />
-
-        </TableRow>
-
         <ScrollView
             android:id="@+id/scrollView2"
             android:layout_width="420dp"
-            android:layout_height="440dp"
+            android:layout_height="550dp"
             android:layout_marginTop="10dp"
             android:background="#ffffff">
 
@@ -60,40 +64,48 @@
                 android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/editText3"
+                    android:id="@+id/et_title"
                     android:layout_width="390dp"
                     android:layout_height="100dp"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginRight="10dp"
                     android:ems="10"
-                    android:hint="   글 제목"
-                    android:inputType="textEmailAddress" />
+                    android:hint="글 제목"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="#000000" />
 
                 <EditText
-                    android:id="@+id/editText2"
+                    android:id="@+id/et_cont"
                     android:layout_width="390dp"
-                    android:layout_height="550dp"
+                    android:layout_height="400dp"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:ems="10"
                     android:gravity="start|top"
-                    android:hint="   글 작성"
-                    android:inputType="textMultiLine" />
+                    android:hint="글 작성"
+                    android:inputType="textMultiLine"
+                    android:padding="10dp" />
 
             </LinearLayout>
         </ScrollView>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_margin="15dp">
-
-            <Button
-                android:id="@+id/btn_img"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@drawable/image_white" />
-
-        </TableRow>
     </LinearLayout>
 
-</LinearLayout>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#687BA1"
+        android:padding="15dp">
+
+        <Button
+            android:id="@+id/btn_img"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:background="@drawable/image_white" />
+
+    </TableRow>
+
+</TableLayout>

@@ -12,6 +12,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        btn_pre.setOnClickListener {
+            val intent = Intent (this, list::class.java)
+            startActivity(intent)
+        }
+
+        btn_done.setOnClickListener {
+            val intent = Intent (this, list::class.java)
+            startActivity(intent)
+        }
+
         btn_img.setOnClickListener { openGallery() }
     }
 
